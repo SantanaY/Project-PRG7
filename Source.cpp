@@ -135,3 +135,30 @@ int main()
 		}
 	}
 }
+	// ngoutput file binary item.bin
+	std::ofstream bin_item_ostream("./data/item.bin", std::ios::out | std::ios::binary);
+	bin_item_ostream.write((char *)arr_item, sizeof(item_project) * item_count);
+	bin_item_ostream.close();
+
+	// ngoutput file binary pegawai.bin
+	std::ofstream bin_pegawai_ostream("./data/pegawai.bin", std::ios::out | std::ios::binary);
+	bin_pegawai_ostream.write((char *)arr_pegawai, sizeof(pegawai_project) * pegawai_count);
+	bin_pegawai_ostream.close();
+
+	// ngoutput file binary log.bin
+	std::ofstream bin_log_ostream("./data/log.bin", std::ios::out | std::ios::binary);
+	bin_log_ostream.write((char *)arr_log, sizeof(log_project) * log_count);
+	bin_log_ostream.close();
+
+	// ngoutput file total_penjualan.txt
+	std::ofstream txt_tp_ostream("./data/total_penjualan.txt");
+	txt_tp_ostream << "Nama" << '\t' << "Harga Nondiskon" << '\t' << "Diskon Total" << '\t' << "Harga Diskon" << '\t' << "Kuantitas" << '\n';
+	for (int i = 0; i < pegawai_count; i++)
+	{
+		txt_tp_ostream << arr_pegawai[i].nama << '\t' << arr_pegawai[i].harga_nondiskon << '\t' << arr_pegawai[i].diskon_total << '\t' << arr_pegawai[i].harga_diskon
+					   << '\t' << arr_pegawai[i].kuantitas_terjual << '\n';
+	}
+	txt_tp_ostream.close();
+
+	return 0;
+}
