@@ -118,4 +118,20 @@ int main()
 		std::getline(log_istream, s_temp);
 		arr_log[i].kuantiti = stoi(s_temp);
 	}
+	
+	// hitung total penjualan setiap pegawai
+	for (int i = 0; i < log_count; i++)
+	{
+		for (int j = 0; j < pegawai_count; j++)
+		{
+			if (strcmp(arr_log[i].id_kasir, arr_pegawai[j].id) == 0)
+			{
+				arr_pegawai[j].harga_nondiskon += arr_log[i].harga * arr_log[i].kuantiti;
+				arr_pegawai[j].diskon_total += arr_log[i].diskon * arr_log[i].kuantiti;
+				arr_pegawai[j].harga_diskon += (arr_log[i].harga - arr_log[i].diskon) * arr_log[i].kuantiti;
+				arr_pegawai[j].kuantitas_terjual += arr_log[i].kuantiti;
+				break;
+			}
+		}
+	}
 }
