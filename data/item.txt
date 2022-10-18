@@ -1,0 +1,10 @@
+id_item	nama	sku	harga	diskon_nominal	diskon_persen	stok
+8888166991224	Otico biscuit stick	bks	5000	0	0	2329
+8994564634566	Biskuit Enak Segar	bks	12500	0	0	1100
+8887456757456	Keripik pedas premium	bks	23000	1200	0	547
+8888978789784	Permen Rasa Gula	bks	3500	0	0	158
+8888373567566	Minuman Soda Ketawa	btl	15200	0	10	1036
+8898345792345	Madu Murni Sekali	btl	24999	0	0	1837
+8878245985244	Coklat Gelap Pahit	pcs	8990	0	0	896
+8888563498569	Coklat Kacang Garing	pcs	13499	0	0	7524
+8889925495845	Permen Mint Segar	bks	3800	0	0	1252
